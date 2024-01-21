@@ -2,13 +2,13 @@ import React from 'react';
 import Dialog from '@mui/material/Dialog';
 import styles from './Modal.module.css';
 
-interface ChartModalProps {
+interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
 }
 
-const ChartModal: React.FC<ChartModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   return (
     <Dialog open={isOpen} onClose={onClose} fullScreen>
       <span className={styles.close} onClick={onClose}>
@@ -19,4 +19,4 @@ const ChartModal: React.FC<ChartModalProps> = ({ isOpen, onClose, children }) =>
   );
 };
 
-export default ChartModal;
+export default Modal;
