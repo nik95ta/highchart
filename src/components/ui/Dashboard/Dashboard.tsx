@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box } from '@mui/material';
-import { Button, Modal } from '../../../components';
+import { Button, Chart, Modal } from '../../../components';
+import { chartOptions } from '../../../data';
 
 const Dashboard: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -18,7 +19,7 @@ const Dashboard: React.FC = () => {
         <Button onClick={openModal}>Show Chart!</Button>
       </Box>
       <Modal isOpen={modalOpen} onClose={closeModal}>
-        <div>Hi</div>
+        <Chart chartOptions={chartOptions} />
       </Modal>
     </>
   );
