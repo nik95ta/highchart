@@ -1,10 +1,8 @@
-import React from "react";
+import React from 'react';
+import { Dashboard } from './components';
 
 const App: React.FC = () => {
-
-  return (
-      <div>Hi</div>
-  );
+  return <Dashboard />;
 };
 
 export default App;
